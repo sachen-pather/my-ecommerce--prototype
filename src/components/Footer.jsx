@@ -8,8 +8,22 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">
-              StudentCircuits
+            <h3 className="text-2xl font-extrabold">
+              <span style={{ color: "#FF4500" }}>S</span>
+              <span style={{ color: "#FFD700" }}>t</span>
+              <span style={{ color: "#32CD32" }}>u</span>
+              <span style={{ color: "#1E90FF" }}>d</span>
+              <span style={{ color: "#FF69B4" }}>e</span>
+              <span style={{ color: "#8A2BE2" }}>n</span>
+              <span style={{ color: "#FF4500" }}>t</span>
+              <span style={{ color: "#FFD700" }}>C</span>
+              <span style={{ color: "#32CD32" }}>i</span>
+              <span style={{ color: "#1E90FF" }}>r</span>
+              <span style={{ color: "#FF69B4" }}>c</span>
+              <span style={{ color: "#8A2BE2" }}>u</span>
+              <span style={{ color: "#FF4500" }}>i</span>
+              <span style={{ color: "#FFD700" }}>t</span>
+              <span style={{ color: "#32CD32" }}>s</span>
             </h3>
             <p className="text-gray-400 mb-4">
               Your one-stop shop for all your shopping needs. Quality products
