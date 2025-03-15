@@ -40,7 +40,15 @@ const Navbar = () => {
             </span>
           </Link>
           {/* Desktop Navigation */}
+
           <nav className="hidden md:flex items-center space-x-8">
+            <Link
+              to="/"
+              className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
+            >
+              Home
+            </Link>
+
             <Link
               to="/products"
               className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
@@ -66,11 +74,12 @@ const Navbar = () => {
             >
               Our Mission
             </Link>
+
             <Link
-              to="/"
+              to="/learn-more"
               className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
             >
-              Home
+              Learn More
             </Link>
           </nav>
           {/* Desktop Icons */}

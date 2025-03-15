@@ -10,6 +10,7 @@ import { CartProvider } from "./context/CartContext";
 import OurMission from "./pages/OurMission";
 import UniversitiesPage from "./pages/UniversitiesPage";
 import ImpactDashboardPage from "./pages/ImpactDashboardPage";
+import LearnMorePage from "./pages/LearnMorePage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
                 path="/impact-dashboard"
                 element={<ImpactDashboardPage />}
               />
+              <Route path="/learn-more" element={<LearnMorePage />} />
             </Routes>
           </main>
           <Footer />

@@ -35,11 +35,23 @@ const ImpactDashboardPage = () => {
       { type: "Other", count: 109, percentage: 4.2 },
     ],
     topUniversities: [
-      { name: "UC Berkeley", devicesExchanged: 476, co2Saved: 33320 },
-      { name: "Stanford", devicesExchanged: 412, co2Saved: 28840 },
-      { name: "MIT", devicesExchanged: 392, co2Saved: 27440 },
-      { name: "UCLA", devicesExchanged: 318, co2Saved: 22260 },
-      { name: "Harvard", devicesExchanged: 247, co2Saved: 17290 },
+      {
+        name: "UCT - RSA",
+        devicesExchanged: 476,
+        co2Saved: 33320,
+      },
+      { name: "UoB - UK", devicesExchanged: 412, co2Saved: 28840 },
+      {
+        name: "UoN - UK",
+        devicesExchanged: 392,
+        co2Saved: 27440,
+      },
+      {
+        name: "UP - RSA",
+        devicesExchanged: 318,
+        co2Saved: 22260,
+      },
+      { name: "UzK - Ger", devicesExchanged: 247, co2Saved: 17290 },
     ],
     monthlyData: [
       { month: "Jan", devices: 148, co2: 10360 },
@@ -143,11 +155,19 @@ const ImpactDashboardPage = () => {
                 className="bg-gray-700 text-white border border-gray-600 rounded px-3 py-1 pr-8 appearance-none focus:outline-none focus:ring-2 focus:ring-green-500"
               >
                 <option value="all">All Universities</option>
-                <option value="berkeley">UC Berkeley</option>
-                <option value="stanford">Stanford</option>
-                <option value="mit">MIT</option>
-                <option value="ucla">UCLA</option>
-                <option value="harvard">Harvard</option>
+                <option value="University of Cape Town">
+                  University of Cape Town
+                </option>
+                <option value="University of Cologne">
+                  University of Cologne
+                </option>
+                <option value="University of Bath">University of Bath</option>
+                <option value="University of Pretoria">
+                  University of Pretoria
+                </option>
+                <option value="University of Newcastle">
+                  University of Newcastle
+                </option>
               </select>
               <ChevronDown
                 size={16}
@@ -239,91 +259,195 @@ const ImpactDashboardPage = () => {
       {/* Charts */}
       <div className="container mx-auto px-4 mb-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Exchange Growth Chart */}
+          {/* Exchange Growth Chart - IMPROVED WITH LINE GRAPH */}
           <div className="bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700">
             <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
               <LineChart size={20} className="mr-2 text-blue-400" />
               Device Exchange Growth
             </h3>
             <div className="h-64 flex items-center justify-center">
-              {/* This would be where a real chart would go */}
+              {/* Improved line chart visualization */}
               <div className="relative w-full h-full">
-                {/* Simulated chart using divs */}
+                {/* Axes */}
                 <div className="absolute bottom-0 left-0 right-0 border-t border-gray-700 h-0"></div>
                 <div className="absolute left-0 bottom-0 top-0 border-r border-gray-700 w-0"></div>
 
-                {timeframe === "yearly" &&
-                  impactData.yearlyData.map((data, index) => {
-                    const height =
-                      (data.devices /
-                        impactData.yearlyData[impactData.yearlyData.length - 1]
-                          .devices) *
-                      100;
-                    const width = 100 / impactData.yearlyData.length;
-                    const left = index * width;
+                {timeframe === "yearly" && (
+                  <>
+                    {/* Line chart for yearly data */}
+                    <svg
+                      className="absolute inset-0 w-full h-full"
+                      viewBox="0 0 100 100"
+                      preserveAspectRatio="none"
+                    >
+                      <polyline
+                        points={impactData.yearlyData
+                          .map((data, index) => {
+                            const x =
+                              (index / (impactData.yearlyData.length - 1)) *
+                              100;
+                            const maxDevices =
+                              impactData.yearlyData[
+                                impactData.yearlyData.length - 1
+                              ].devices;
+                            const y = 100 - (data.devices / maxDevices) * 100;
+                            return `${x},${y}`;
+                          })
+                          .join(" ")}
+                        fill="none"
+                        stroke="#3b82f6"
+                        strokeWidth="2"
+                      />
 
-                    return (
-                      <div
-                        key={index}
-                        className="absolute bottom-0"
-                        style={{
-                          left: `${left}%`,
-                          width: `${width}%`,
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "center",
-                        }}
-                      >
-                        <div
-                          className="w-3/4 bg-blue-600 rounded-t"
-                          style={{ height: `${height}%` }}
-                        ></div>
-                        <div className="text-xs text-gray-400 mt-1">
-                          {data.year}
-                        </div>
-                        <div className="text-xs text-white mt-0.5">
-                          {data.devices}
-                        </div>
-                      </div>
-                    );
-                  })}
+                      {/* Data points */}
+                      {impactData.yearlyData.map((data, index) => {
+                        const x =
+                          (index / (impactData.yearlyData.length - 1)) * 100;
+                        const maxDevices =
+                          impactData.yearlyData[
+                            impactData.yearlyData.length - 1
+                          ].devices;
+                        const y = 100 - (data.devices / maxDevices) * 100;
+                        return (
+                          <circle
+                            key={index}
+                            cx={`${x}`}
+                            cy={`${y}`}
+                            r="1.5"
+                            fill="#3b82f6"
+                          />
+                        );
+                      })}
+                    </svg>
 
-                {timeframe === "monthly" &&
-                  impactData.monthlyData.map((data, index) => {
-                    const height =
-                      (data.devices /
-                        impactData.monthlyData[
-                          impactData.monthlyData.length - 1
-                        ].devices) *
-                      100;
-                    const width = 100 / impactData.monthlyData.length;
-                    const left = index * width;
+                    {/* X-axis labels */}
+                    <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-gray-400 pt-2">
+                      {impactData.yearlyData.map((data, index) => (
+                        <div key={index} className="text-center">
+                          <div>{data.year}</div>
+                          <div className="text-white">{data.devices}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
 
-                    return (
-                      <div
-                        key={index}
-                        className="absolute bottom-0"
-                        style={{
-                          left: `${left}%`,
-                          width: `${width}%`,
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "center",
-                        }}
-                      >
-                        <div
-                          className="w-1/2 bg-blue-600 rounded-t"
-                          style={{ height: `${height}%` }}
-                        ></div>
-                        <div className="text-xs text-gray-400 mt-1">
-                          {data.month}
-                        </div>
-                        <div className="text-xs text-white mt-0.5">
-                          {data.devices}
-                        </div>
-                      </div>
-                    );
-                  })}
+                {timeframe === "monthly" && (
+                  <>
+                    {/* Line chart for monthly data */}
+                    <svg
+                      className="absolute inset-0 w-full h-full"
+                      viewBox="0 0 100 100"
+                      preserveAspectRatio="none"
+                    >
+                      <polyline
+                        points={impactData.monthlyData
+                          .map((data, index) => {
+                            const x =
+                              (index / (impactData.monthlyData.length - 1)) *
+                              100;
+                            const maxDevices =
+                              impactData.monthlyData[
+                                impactData.monthlyData.length - 1
+                              ].devices;
+                            const y = 100 - (data.devices / maxDevices) * 90;
+                            return `${x},${y}`;
+                          })
+                          .join(" ")}
+                        fill="none"
+                        stroke="#3b82f6"
+                        strokeWidth="2"
+                      />
+
+                      {/* Area under the line */}
+                      <polygon
+                        points={`0,100 ${impactData.monthlyData
+                          .map((data, index) => {
+                            const x =
+                              (index / (impactData.monthlyData.length - 1)) *
+                              100;
+                            const maxDevices =
+                              impactData.monthlyData[
+                                impactData.monthlyData.length - 1
+                              ].devices;
+                            const y = 100 - (data.devices / maxDevices) * 90;
+                            return `${x},${y}`;
+                          })
+                          .join(" ")} 100,100`}
+                        fill="url(#blue-gradient)"
+                        fillOpacity="0.2"
+                      />
+
+                      {/* Data points */}
+                      {impactData.monthlyData.map((data, index) => {
+                        const x =
+                          (index / (impactData.monthlyData.length - 1)) * 100;
+                        const maxDevices =
+                          impactData.monthlyData[
+                            impactData.monthlyData.length - 1
+                          ].devices;
+                        const y = 100 - (data.devices / maxDevices) * 90;
+                        return (
+                          <circle
+                            key={index}
+                            cx={`${x}`}
+                            cy={`${y}`}
+                            r="1.5"
+                            fill="#3b82f6"
+                          />
+                        );
+                      })}
+
+                      {/* Gradient definition */}
+                      <defs>
+                        <linearGradient
+                          id="blue-gradient"
+                          x1="0%"
+                          y1="0%"
+                          x2="0%"
+                          y2="100%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="#3b82f6"
+                            stopOpacity="0.3"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="#3b82f6"
+                            stopOpacity="0.02"
+                          />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+
+                    {/* X-axis labels - display only every other month to avoid crowding */}
+                    <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-gray-400 pt-2">
+                      {impactData.monthlyData
+                        .filter((_, index) => index % 2 === 0)
+                        .map((data, index) => {
+                          const actualIndex = index * 2;
+                          const position =
+                            (actualIndex /
+                              (impactData.monthlyData.length - 1)) *
+                            100;
+                          return (
+                            <div
+                              key={actualIndex}
+                              style={{
+                                position: "absolute",
+                                left: `${position}%`,
+                                transform: "translateX(-50%)",
+                              }}
+                            >
+                              <div>{data.month}</div>
+                              <div className="text-white">{data.devices}</div>
+                            </div>
+                          );
+                        })}
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -362,7 +486,7 @@ const ImpactDashboardPage = () => {
         </div>
       </div>
 
-      {/* Device Type Breakdown */}
+      {/* Device Type Breakdown - IMPROVED PIE CHART */}
       <div className="container mx-auto px-4 mb-12">
         <div className="bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700">
           <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
@@ -371,13 +495,102 @@ const ImpactDashboardPage = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative h-64 flex items-center justify-center">
-              {/* Simulated pie chart */}
-              <div className="w-48 h-48 rounded-full border-8 border-gray-700 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-blue-600 transform origin-bottom-right rotate-45"></div>
-                <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-green-600 transform origin-bottom-left rotate-45"></div>
-                <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-yellow-600 transform origin-top-left rotate-45"></div>
-                <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-purple-600 transform origin-top-right rotate-45"></div>
-              </div>
+              {/* Improved SVG pie chart */}
+              <svg width="200" height="200" viewBox="0 0 100 100">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="48"
+                  fill="#1f2937"
+                  stroke="#374151"
+                  strokeWidth="1"
+                />
+
+                {/* Calculate and render pie slices based on actual percentages */}
+                {(() => {
+                  const slices = [];
+                  let cumulativeAngle = 0;
+
+                  // Colors for different device types
+                  const colors = [
+                    "#3b82f6",
+                    "#10b981",
+                    "#f59e0b",
+                    "#8b5cf6",
+                    "#ef4444",
+                    "#6b7280",
+                  ];
+
+                  impactData.devicesByType.forEach((device, index) => {
+                    const startAngle = cumulativeAngle;
+                    const angleSize = (device.percentage / 100) * 360;
+                    cumulativeAngle += angleSize;
+
+                    // Calculate start and end points
+                    const startRad = (startAngle - 90) * (Math.PI / 180);
+                    const endRad =
+                      (startAngle + angleSize - 90) * (Math.PI / 180);
+
+                    const startX = 50 + 48 * Math.cos(startRad);
+                    const startY = 50 + 48 * Math.sin(startRad);
+                    const endX = 50 + 48 * Math.cos(endRad);
+                    const endY = 50 + 48 * Math.sin(endRad);
+
+                    // Determine if the arc is large (> 180 degrees)
+                    const largeArcFlag = angleSize > 180 ? 1 : 0;
+
+                    // Create path for the pie slice
+                    const path = `M 50 50 L ${startX} ${startY} A 48 48 0 ${largeArcFlag} 1 ${endX} ${endY} Z`;
+
+                    slices.push(
+                      <path
+                        key={index}
+                        d={path}
+                        fill={colors[index % colors.length]}
+                        stroke="#1f2937"
+                        strokeWidth="0.5"
+                      />
+                    );
+
+                    // Add percentage labels if slice is big enough
+                    if (device.percentage > 5) {
+                      const labelRad =
+                        startRad + (angleSize / 2) * (Math.PI / 180);
+                      const labelX = 50 + 30 * Math.cos(labelRad);
+                      const labelY = 50 + 30 * Math.sin(labelRad);
+
+                      slices.push(
+                        <text
+                          key={`label-${index}`}
+                          x={labelX}
+                          y={labelY}
+                          textAnchor="middle"
+                          dominantBaseline="middle"
+                          fill="white"
+                          fontSize="4"
+                          fontWeight="bold"
+                        >
+                          {device.percentage > 10
+                            ? `${Math.round(device.percentage)}%`
+                            : ""}
+                        </text>
+                      );
+                    }
+                  });
+
+                  return slices;
+                })()}
+
+                {/* Center circle for aesthetic */}
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="15"
+                  fill="#1f2937"
+                  stroke="#374151"
+                  strokeWidth="0.5"
+                />
+              </svg>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {impactData.devicesByType.map((device, index) => (

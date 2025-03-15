@@ -37,7 +37,7 @@ const product = {
   },
   qualityVerification: {
     verifiedBy: "University of Cape Town Tech Center",
-    verificationDate: "2023-11-15",
+    verificationDate: "2025-03-15",
     score: 8.5,
     notes:
       "Battery and keyboard recently replaced. All ports and features working properly.",

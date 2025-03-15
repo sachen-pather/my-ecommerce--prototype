@@ -14,7 +14,7 @@ const allProducts = [
     price: 599.99,
     condition: "Good",
     age: "2 years",
-    university: "University of Pretoria",
+    university: "University of Cape Town",
     qualityScore: 8.5,
     image: "/images/macbookpro2019.jpg",
     environmentalImpact: {
@@ -220,8 +220,8 @@ const categories = [
   "Smartphones",
   "Tablets",
   "Audio",
-  "Cameras",
-  "Gaming",
+  "Calculators",
+  "Chargers",
 ];
 const universities = [
   "All",

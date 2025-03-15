@@ -5,7 +5,7 @@ import {
   Tablet,
   Headphones,
   Camera,
-  Gamepad,
+  Calculator,
 } from "lucide-react";
 
 const categories = [
@@ -47,11 +47,11 @@ const categories = [
   },
   {
     id: 5,
-    name: "Cameras",
-    image: "/images/camera.jpeg",
+    name: "Calculators",
+    image: "/images/calculator.jpg",
     count: 19,
-    icon: Camera,
-    description: "Digital cameras & accessories",
+    icon: Calculator,
+    description: "Scientific calculators",
     savedCO2: "1,200kg",
   },
   {
