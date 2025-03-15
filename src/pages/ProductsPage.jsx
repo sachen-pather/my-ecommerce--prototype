@@ -14,7 +14,7 @@ const allProducts = [
     price: 599.99,
     condition: "Good",
     age: "2 years",
-    university: "UC Berkeley",
+    university: "University of Pretoria",
     qualityScore: 8.5,
     image: "/images/macbookpro2019.jpg",
     environmentalImpact: {
@@ -31,7 +31,7 @@ const allProducts = [
     price: 399.99,
     condition: "Excellent",
     age: "1 year",
-    university: "UC Berkeley",
+    university: "University of Cologne",
     qualityScore: 9.2,
     image: "/images/ipadpro2020.jpg",
     environmentalImpact: {
@@ -48,7 +48,7 @@ const allProducts = [
     price: 299.99,
     condition: "Good",
     age: "2 years",
-    university: "Stanford",
+    university: "University of Bath",
     qualityScore: 8.0,
     image: "/images/iphone11.jpg",
     environmentalImpact: {
@@ -65,7 +65,7 @@ const allProducts = [
     price: 549.99,
     condition: "Good",
     age: "1.5 years",
-    university: "UCLA",
+    university: "University of Newcastle",
     qualityScore: 8.7,
     image: "/images/dellxps13.jpeg",
     environmentalImpact: {
@@ -82,7 +82,7 @@ const allProducts = [
     price: 129.99,
     condition: "Excellent",
     age: "1 year",
-    university: "MIT",
+    university: "University of Cape Town",
     qualityScore: 9.0,
     image: "/images/airpodspro.jpg",
     environmentalImpact: {
@@ -99,7 +99,7 @@ const allProducts = [
     price: 349.99,
     condition: "Fair",
     age: "2 years",
-    university: "Harvard",
+    university: "University of Cape Town",
     qualityScore: 7.5,
     image: "/images/Samsung.jpg",
     environmentalImpact: {
@@ -116,7 +116,7 @@ const allProducts = [
     price: 499.99,
     condition: "Good",
     age: "1.5 years",
-    university: "Stanford",
+    university: "University of Pretoria",
     qualityScore: 8.3,
     image: "/images/microsoftsurfacepro.jpg",
     environmentalImpact: {
@@ -133,7 +133,7 @@ const allProducts = [
     price: 159.99,
     condition: "Excellent",
     age: "1 year",
-    university: "UC Berkeley",
+    university: "University of Bath",
     qualityScore: 9.1,
     image: "/images/bose.jpg",
     environmentalImpact: {
@@ -150,7 +150,7 @@ const allProducts = [
     price: 279.99,
     condition: "Good",
     age: "2 years",
-    university: "MIT",
+    university: "University of Bath",
     qualityScore: 8.2,
     image: "/images/googlepixel4.jpeg",
     environmentalImpact: {
@@ -167,7 +167,7 @@ const allProducts = [
     price: 629.99,
     condition: "Good",
     age: "2 years",
-    university: "Harvard",
+    university: "University of Newcastle",
     qualityScore: 8.4,
     image: "/images/lenovothinkpad.jpeg",
     environmentalImpact: {
@@ -184,7 +184,7 @@ const allProducts = [
     price: 329.99,
     condition: "Excellent",
     age: "1 year",
-    university: "UCLA",
+    university: "University of Cologne",
     qualityScore: 9.3,
     image: "/images/canoneos.jpg",
     environmentalImpact: {
@@ -201,7 +201,7 @@ const allProducts = [
     price: 219.99,
     condition: "Good",
     age: "1.5 years",
-    university: "Stanford",
+    university: "University of Cologne",
     qualityScore: 8.6,
     image: "/images/universalcharger.jpeg",
     environmentalImpact: {
@@ -225,11 +225,12 @@ const categories = [
 ];
 const universities = [
   "All",
-  "UC Berkeley",
-  "Stanford",
-  "MIT",
-  "UCLA",
-  "Harvard",
+  "University of Pretoria",
+  "University of Cape Town",
+  "University of Cologne",
+  "University of Nottingham",
+  "University of Newcastle",
+  "University of Bath",
 ];
 const conditions = ["All", "Excellent", "Good", "Fair"];
 const sortOptions = [

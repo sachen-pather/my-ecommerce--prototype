@@ -17,14 +17,14 @@ const UniversitiesPage = () => {
   const universities = [
     {
       id: 1,
-      name: "UC Berkeley",
+      name: "University of Cape Town",
       logo: "/images/universities/berkeley.jpg",
-      location: "Berkeley, CA",
+      location: "Cape Town, RSA",
       studentsServed: 1245,
       devicesSaved: 476,
       co2Reduced: "33,320kg",
       description:
-        "UC Berkeley was one of our first university partners, establishing a campus-wide e-waste program that has seen tremendous success among students and faculty.",
+        "UCT was one of our first university partners, establishing a campus-wide e-waste program that has seen tremendous success among students and faculty.",
       highlights: [
         "Campus tech center processes all devices",
         "Student-run collection program",
@@ -33,14 +33,14 @@ const UniversitiesPage = () => {
     },
     {
       id: 2,
-      name: "Stanford University",
+      name: "University of Bath",
       logo: "/images/universities/stanford.jpg",
-      location: "Stanford, CA",
+      location: "Bath, UK",
       studentsServed: 978,
       devicesSaved: 412,
       co2Reduced: "28,840kg",
       description:
-        "Stanford's partnership has focused on integrating our platform with their existing sustainability initiatives, creating a comprehensive approach to campus e-waste.",
+        "Univerity of Bath's partnership has focused on integrating our platform with their existing sustainability initiatives, creating a comprehensive approach to campus e-waste.",
       highlights: [
         "Dedicated e-waste lab space",
         "Faculty research integration",
@@ -49,14 +49,14 @@ const UniversitiesPage = () => {
     },
     {
       id: 3,
-      name: "MIT",
+      name: "University of Newcastle",
       logo: "/images/universities/mit.jpg",
-      location: "Cambridge, MA",
+      location: "Newcastle, UK",
       studentsServed: 864,
       devicesSaved: 392,
       co2Reduced: "27,440kg",
       description:
-        "MIT has pioneered innovative approaches to device testing and refurbishment, establishing new standards for our quality verification process.",
+        "University of Newcastle has pioneered innovative approaches to device testing and refurbishment, establishing new standards for our quality verification process.",
       highlights: [
         "Engineering department oversight",
         "Advanced testing protocols",
@@ -65,14 +65,14 @@ const UniversitiesPage = () => {
     },
     {
       id: 4,
-      name: "UCLA",
+      name: "University of Pretoria",
       logo: "/images/universities/ucla.jpg",
-      location: "Los Angeles, CA",
+      location: "Pretoria, RSA",
       studentsServed: 752,
       devicesSaved: 318,
       co2Reduced: "22,260kg",
       description:
-        "UCLA's program emphasizes accessibility, with a focus on ensuring underserved student populations have priority access to quality technology.",
+        "UP's program emphasizes accessibility, with a focus on ensuring underserved student populations have priority access to quality technology.",
       highlights: [
         "Financial aid integration",
         "Need-based distribution",
@@ -81,14 +81,14 @@ const UniversitiesPage = () => {
     },
     {
       id: 5,
-      name: "Harvard University",
+      name: "University of Cologne",
       logo: "/images/universities/harvard.jpg",
-      location: "Cambridge, MA",
+      location: "Cologne, Germany",
       studentsServed: 586,
       devicesSaved: 247,
       co2Reduced: "17,290kg",
       description:
-        "Harvard has integrated our platform with their campus IT services, creating a seamless experience for students and staff.",
+        "University of Cologne has integrated our platform with their campus IT services, creating a seamless experience for students and staff.",
       highlights: [
         "IT department partnership",
         "Staff training program",
@@ -97,14 +97,14 @@ const UniversitiesPage = () => {
     },
     {
       id: 6,
-      name: "University of Michigan",
+      name: "University of Nottingham",
       logo: "/images/universities/michigan.jpg",
-      location: "Ann Arbor, MI",
+      location: "Nottingham, UK",
       studentsServed: 493,
       devicesSaved: 214,
       co2Reduced: "14,980kg",
       description:
-        "Michigan's program has been particularly successful at engaging their engineering and computer science departments in device refurbishment.",
+        "Nottingham's program has been particularly successful at engaging their engineering and computer science departments in device refurbishment.",
       highlights: [
         "Course credit for repairs",
         "Tech internship program",

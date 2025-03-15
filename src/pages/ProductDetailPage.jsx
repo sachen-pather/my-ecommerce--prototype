@@ -23,9 +23,9 @@ const product = {
   price: 599.99,
   condition: "Good",
   age: "2 years",
-  university: "UC Berkeley",
+  university: "University of Cape Town",
   description:
-    "This MacBook Pro has been thoroughly tested and certified by UC Berkeley's Tech Center. The device is in good condition with minor cosmetic wear and excellent functionality. Perfect for students looking for a reliable laptop at an affordable price.",
+    "This MacBook Pro has been thoroughly tested and certified by University of Cape Town's Tech Center. The device is in good condition with minor cosmetic wear and excellent functionality. Perfect for students looking for a reliable laptop at an affordable price.",
   specifications: {
     processor: "Intel Core i5 2.4GHz",
     memory: "8GB RAM",
@@ -36,7 +36,7 @@ const product = {
     operatingSystem: "macOS Monterey",
   },
   qualityVerification: {
-    verifiedBy: "UC Berkeley Tech Center",
+    verifiedBy: "University of Cape Town Tech Center",
     verificationDate: "2023-11-15",
     score: 8.5,
     notes:
@@ -58,7 +58,7 @@ const product = {
   images: ["/images/secondhandmacbook.jpg"],
   colors: ["Silver"],
   rating: 4.5,
-  reviews: 28,
+  reviews: 2,
   stock: 3,
 };
 
@@ -70,14 +70,14 @@ const relatedProducts = [
     category: "Tablets",
     price: 399.99,
     condition: "Excellent",
-    university: "UC Berkeley",
+    university: "University of Cape Town",
     image: "/images/ipadpro2020.jpg",
     environmentalImpact: {
       carbonSaved: "85kg",
       wasteReduced: "1.2kg",
     },
     rating: 4.8,
-    reviews: 19,
+    reviews: 1,
   },
   {
     id: 3,
@@ -85,14 +85,14 @@ const relatedProducts = [
     category: "Smartphones",
     price: 299.99,
     condition: "Good",
-    university: "Stanford",
+    university: "University of Cape Town",
     image: "/images/iphone11.jpg",
     environmentalImpact: {
       carbonSaved: "65kg",
       wasteReduced: "0.8kg",
     },
     rating: 4.3,
-    reviews: 34,
+    reviews: 1,
   },
   {
     id: 4,
@@ -100,14 +100,14 @@ const relatedProducts = [
     category: "Laptops",
     price: 549.99,
     condition: "Good",
-    university: "UCLA",
+    university: "University of Cape Town",
     image: "/images/dellxps13.jpeg",
     environmentalImpact: {
       carbonSaved: "110kg",
       wasteReduced: "2.1kg",
     },
     rating: 4.6,
-    reviews: 22,
+    reviews: 2,
   },
   {
     id: 5,
@@ -115,14 +115,14 @@ const relatedProducts = [
     category: "Audio",
     price: 129.99,
     condition: "Excellent",
-    university: "MIT",
+    university: "University of Cape Town",
     image: "/images/airpodspro.jpg",
     environmentalImpact: {
       carbonSaved: "25kg",
       wasteReduced: "0.3kg",
     },
     rating: 4.4,
-    reviews: 41,
+    reviews: 1,
   },
 ];
 
