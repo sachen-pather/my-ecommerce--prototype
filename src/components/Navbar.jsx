@@ -21,16 +21,26 @@ const Navbar = () => {
               alt="StudentCircuits Logo"
               className="h-20 w-auto"
             />
-            <span className="text-3xl font-extrabold">StudentCircuits</span>
+            <span className="text-3xl font-extrabold">
+              <span style={{ color: "#FF4500" }}>S</span>
+              <span style={{ color: "#FFD700" }}>t</span>
+              <span style={{ color: "#32CD32" }}>u</span>
+              <span style={{ color: "#1E90FF" }}>d</span>
+              <span style={{ color: "#FF69B4" }}>e</span>
+              <span style={{ color: "#8A2BE2" }}>n</span>
+              <span style={{ color: "#FF4500" }}>t</span>
+              <span style={{ color: "#FFD700" }}>C</span>
+              <span style={{ color: "#32CD32" }}>i</span>
+              <span style={{ color: "#1E90FF" }}>r</span>
+              <span style={{ color: "#FF69B4" }}>c</span>
+              <span style={{ color: "#8A2BE2" }}>u</span>
+              <span style={{ color: "#FF4500" }}>i</span>
+              <span style={{ color: "#FFD700" }}>t</span>
+              <span style={{ color: "#32CD32" }}>s</span>
+            </span>
           </Link>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link
-              to="/"
-              className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
-            >
-              Home
-            </Link>
             <Link
               to="/products"
               className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
@@ -43,7 +53,12 @@ const Navbar = () => {
             >
               Universities
             </Link>
-
+            <Link
+              to="/impact-dashboard"
+              className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
+            >
+              Impact Dashboard
+            </Link>
             <Link
               to="/our-mission"
               className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
@@ -51,12 +66,11 @@ const Navbar = () => {
             >
               Our Mission
             </Link>
-
             <Link
-              to="/impact-dashboard"
+              to="/"
               className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
             >
-              Impact Dashboard
+              Home
             </Link>
           </nav>
           {/* Desktop Icons */}
@@ -109,13 +123,6 @@ const Navbar = () => {
           <div className="md:hidden mt-4 pb-4">
             <nav className="flex flex-col space-y-4">
               <Link
-                to="/"
-                className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link
                 to="/products"
                 className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
                 onClick={() => setIsMenuOpen(false)}
@@ -129,7 +136,13 @@ const Navbar = () => {
               >
                 Universities
               </Link>
-
+              <Link
+                to="/impact-dashboard"
+                className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Impact Dashboard
+              </Link>
               <Link
                 to="/our-mission"
                 className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
@@ -137,13 +150,12 @@ const Navbar = () => {
               >
                 Our Mission
               </Link>
-
               <Link
-                to="/impact-dashboard"
+                to="/"
                 className="text-lg font-semibold text-gray-300 hover:text-white transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Impact Dashboard
+                Home
               </Link>
             </nav>
           </div>
