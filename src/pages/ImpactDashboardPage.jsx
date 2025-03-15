@@ -31,7 +31,7 @@ const ImpactDashboardPage = () => {
       { type: "Smartphones", count: 734, percentage: 28.8 },
       { type: "Tablets", count: 412, percentage: 16.2 },
       { type: "Audio Devices", count: 186, percentage: 7.3 },
-      { type: "Monitors", count: 124, percentage: 4.9 },
+      { type: "Calculators", count: 124, percentage: 4.9 },
       { type: "Other", count: 109, percentage: 4.2 },
     ],
     topUniversities: [
@@ -68,11 +68,11 @@ const ImpactDashboardPage = () => {
       { month: "Dec", devices: 394, co2: 27580 },
     ],
     yearlyData: [
-      { year: "2020", devices: 421, co2: 29470 },
-      { year: "2021", devices: 632, co2: 44240 },
-      { year: "2022", devices: 948, co2: 66360 },
-      { year: "2023", devices: 1423, co2: 99610 },
-      { year: "2024", devices: 2547, co2: 178290 },
+      { year: "2025", devices: 421, co2: 29470 },
+      { year: "2026", devices: 632, co2: 44240 },
+      { year: "2027", devices: 948, co2: 66360 },
+      { year: "2028", devices: 1423, co2: 99610 },
+      { year: "2029", devices: 2547, co2: 178290 },
     ],
     impactComparisons: [
       {

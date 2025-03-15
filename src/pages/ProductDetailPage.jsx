@@ -241,6 +241,16 @@ const ProductDetailPage = () => {
                     </p>
                   </div>
                 </div>
+
+                {/* Impact Dashboard Link */}
+                <div className="text-center mt-4">
+                  <a
+                    href="/impact-dashboard"
+                    className="text-blue-400 hover:text-blue-300 font-medium transition-colors underline"
+                  >
+                    See our impact here
+                  </a>
+                </div>
               </div>
             </div>
 
