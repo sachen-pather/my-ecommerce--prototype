@@ -90,8 +90,8 @@ const HomePage = () => {
                   Universities Verify Devices
                 </h4>
                 <p className="text-gray-300 leading-relaxed">
-                  Tech centers at each university inspect, test, and refurbish
-                  devices before listing them on our platform.
+                  Tech centers at each university inspect and test devices
+                  before listing them on our platform.
                 </p>
                 {/* Connector line for desktop */}
                 <div className="hidden md:block absolute top-8 left-[calc(50%+3rem)] w-[calc(100%-6rem)] h-0.5 bg-gradient-to-r from-primary/50 to-primary/0"></div>
