@@ -331,13 +331,12 @@ const ProductDetailPage = () => {
                 </div>
               </div>
 
-              {/* Learn More Button */}
-              <div className="text-center">
+              <div className="text-center mt-3">
                 <a
                   href="/learn-more"
-                  className="inline-block px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white font-medium rounded-lg transition-colors"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition-colors underline"
                 >
-                  Learn More About UN Sustainable Development Goals
+                  Learn more about UN Sustainable Development Goals
                 </a>
               </div>
             </div>
@@ -405,7 +404,7 @@ const ProductDetailPage = () => {
                 )}
               </div>
               <p className="text-green-400 text-sm mt-1">
-                In Stock ({product.stock} available)
+                In Stock (1 available)
               </p>
             </div>
 
