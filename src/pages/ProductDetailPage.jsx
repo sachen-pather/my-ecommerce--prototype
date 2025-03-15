@@ -187,7 +187,7 @@ const ProductDetailPage = () => {
                 className="w-full h-auto rounded-lg border border-gray-700"
               />
             </div>
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-4 gap-2 mb-8">
               {product.images.map((image, index) => (
                 <button
                   key={index}
@@ -203,6 +203,143 @@ const ProductDetailPage = () => {
                   />
                 </button>
               ))}
+            </div>
+
+            {/* Environmental Impact */}
+            <div className="mb-6 mt-8">
+              <h3 className="font-semibold mb-2">Environmental Impact</h3>
+              <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                <div className="flex items-center mb-2">
+                  <span className="text-lg mr-2">🌱</span>
+                  <span className="font-medium text-green-400">
+                    Sustainability Impact
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="bg-gray-900 p-2 rounded">
+                    <p className="text-sm text-gray-400">CO₂ Emissions Saved</p>
+                    <p className="font-medium text-green-400">
+                      {product.environmentalImpact.carbonSaved}
+                    </p>
+                  </div>
+                  <div className="bg-gray-900 p-2 rounded">
+                    <p className="text-sm text-gray-400">E-Waste Reduced</p>
+                    <p className="font-medium text-green-400">
+                      {product.environmentalImpact.wasteReduced}
+                    </p>
+                  </div>
+                  <div className="bg-gray-900 p-2 rounded">
+                    <p className="text-sm text-gray-400">Water Saved</p>
+                    <p className="font-medium text-green-400">
+                      {product.environmentalImpact.waterSaved}
+                    </p>
+                  </div>
+                  <div className="bg-gray-900 p-2 rounded">
+                    <p className="text-sm text-gray-400">Extended Lifespan</p>
+                    <p className="font-medium text-green-400">
+                      {product.environmentalImpact.extendedLifespan}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Did You Know Box */}
+            <div className="mt-8 bg-blue-900/30 rounded-lg p-4 border border-blue-700">
+              <div className="flex items-center mb-3">
+                <span className="text-lg mr-2">💡</span>
+                <h3 className="font-semibold text-blue-300">Did You Know?</h3>
+              </div>
+              <p className="text-gray-200 mb-3">
+                The average laptop produces approximately 316kg of CO₂ during
+                manufacturing and shipping — equivalent to driving a car for
+                1,200 miles.
+              </p>
+              <p className="text-gray-200 mb-4">
+                By supporting us, you're helping reduce e-waste, lower carbon
+                emissions, and provide affordable technology to students who
+                need it most, all while advancing the UN Sustainable Development
+                Goals.
+              </p>
+
+              {/* SDG Goals */}
+              <div className="mb-4">
+                <h4 className="font-medium text-blue-300 mb-2">
+                  By purchasing this device, you help support:
+                </h4>
+
+                <div className="space-y-3">
+                  <div className="flex">
+                    <div className="mr-2 flex-shrink-0 w-8 h-8 bg-red-600 rounded-full flex items-center justify-center font-bold text-white">
+                      4
+                    </div>
+                    <div>
+                      <p className="font-medium text-blue-200">
+                        Quality Education
+                      </p>
+                      <p className="text-sm text-gray-300">
+                        By providing affordable technology to students, we
+                        support access to quality education.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex">
+                    <div className="mr-2 flex-shrink-0 w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center font-bold text-white">
+                      9
+                    </div>
+                    <div>
+                      <p className="font-medium text-blue-200">
+                        Industry, Innovation and Infrastructure
+                      </p>
+                      <p className="text-sm text-gray-300">
+                        We promote innovation by refurbishing devices and
+                        building sustainable tech infrastructure.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex">
+                    <div className="mr-2 flex-shrink-0 w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center font-bold text-white">
+                      12
+                    </div>
+                    <div>
+                      <p className="font-medium text-blue-200">
+                        Responsible Consumption and Production
+                      </p>
+                      <p className="text-sm text-gray-300">
+                        Our platform reduces e-waste by encouraging reuse and
+                        responsible device lifecycles.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex">
+                    <div className="mr-2 flex-shrink-0 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center font-bold text-white">
+                      13
+                    </div>
+                    <div>
+                      <p className="font-medium text-blue-200">
+                        Climate Action
+                      </p>
+                      <p className="text-sm text-gray-300">
+                        Reducing e-waste helps lower carbon footprints and
+                        combat climate change.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Learn More Button */}
+              <div className="text-center">
+                <a
+                  href="/learn-more"
+                  className="inline-block px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white font-medium rounded-lg transition-colors"
+                >
+                  Learn More About UN Sustainable Development Goals
+                </a>
+              </div>
             </div>
           </div>
 
@@ -297,45 +434,6 @@ const ProductDetailPage = () => {
             {/* Description */}
             <div className="mb-6">
               <p className="text-gray-400">{product.description}</p>
-            </div>
-
-            {/* Environmental Impact */}
-            <div className="mb-6">
-              <h3 className="font-semibold mb-2">Environmental Impact</h3>
-              <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
-                <div className="flex items-center mb-2">
-                  <span className="text-lg mr-2">🌱</span>
-                  <span className="font-medium text-green-400">
-                    Sustainability Impact
-                  </span>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-gray-900 p-2 rounded">
-                    <p className="text-sm text-gray-400">CO₂ Emissions Saved</p>
-                    <p className="font-medium text-green-400">
-                      {product.environmentalImpact.carbonSaved}
-                    </p>
-                  </div>
-                  <div className="bg-gray-900 p-2 rounded">
-                    <p className="text-sm text-gray-400">E-Waste Reduced</p>
-                    <p className="font-medium text-green-400">
-                      {product.environmentalImpact.wasteReduced}
-                    </p>
-                  </div>
-                  <div className="bg-gray-900 p-2 rounded">
-                    <p className="text-sm text-gray-400">Water Saved</p>
-                    <p className="font-medium text-green-400">
-                      {product.environmentalImpact.waterSaved}
-                    </p>
-                  </div>
-                  <div className="bg-gray-900 p-2 rounded">
-                    <p className="text-sm text-gray-400">Extended Lifespan</p>
-                    <p className="font-medium text-green-400">
-                      {product.environmentalImpact.extendedLifespan}
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Quality Verification */}
