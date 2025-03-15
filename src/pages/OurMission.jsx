@@ -39,7 +39,7 @@ const OurMission = () => {
               technology."
             </p>
             <p className="text-gray-300">
-              At EcoTechExchange, we believe that every electronic device has
+              At StudentCircuits, we believe that every electronic device has
               value beyond its first user. By facilitating the exchange of used
               devices within university communities, we're building a more
               sustainable future while making technology more affordable for

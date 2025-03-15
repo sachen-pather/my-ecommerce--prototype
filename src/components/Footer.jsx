@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">
-              EcoTechExchange
+              StudentCircuits
             </h3>
             <p className="text-gray-400 mb-4">
               Your one-stop shop for all your shopping needs. Quality products
